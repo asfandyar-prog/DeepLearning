@@ -1,103 +1,168 @@
-Deep Learning Projects in PyTorch
+# 🧠 DeepLearning Repository  
+### Neural Networks, CNNs, Transformers & From-Scratch Implementations
 
-Welcome to my Deep Learning Projects repository, where I explore MLPs, CNNs, and Vision Transformers using PyTorch.
-These notebooks are designed for learning, experimenting, and mastering deep learning concepts from scratch with hands-on examples.
+This repository contains my structured journey through Deep Learning — covering foundational neural networks, convolutional models, vision transformers, and low-level implementations from scratch.
 
-🚀 Projects Overview
-Project	Description	Dataset
-Artificial_neural_network.ipynb	Basic feedforward neural network (MLP) implementation	MNIST / Custom
-MLP.ipynb	Multi-layer Perceptron for classification tasks	MNIST / Tabular data
-Titanic_Tabular_Classification_with_PyTorch_MLP.ipynb	MLP applied to real-world tabular data (Titanic survival prediction)	Titanic Dataset
-Tabular_Classification.ipynb	General-purpose MLP for tabular classification	Custom Tabular Data
-MNIST_CNN_Classification.ipynb	CNN for handwritten digit recognition	MNIST
-cifar-10-image-classification-with-a-deep-cnn.ipynb	Deep CNN for CIFAR-10 image classification	CIFAR-10
-🏗️_CIFAR_10_CNN.ipynb	Enhanced CNN with data augmentation & improved performance	CIFAR-10
-Assignment_1_MLP,CNN_and_Vision_Transformers_in_PyTorch(Due_Jan_26,_2025).ipynb	Structured assignment covering MLPs, CNNs, and Vision Transformers	MNIST / CIFAR
-✨ Features
+It includes coursework, independent implementations, and experimental architectures built primarily using **PyTorch**.
 
-✅ Hands-on PyTorch implementations for beginners & intermediates
+---
 
-✅ Step-by-step tutorials on MLPs, CNNs, and Transformers
+## 📌 Overview
 
-✅ Practical applications: image classification & tabular data prediction
+This repository explores:
 
-✅ Modern techniques: BatchNorm, Dropout, Data Augmentation, Top-5 Accuracy
+- Artificial Neural Networks (ANN)
+- Multi-Layer Perceptrons (MLP)
+- Convolutional Neural Networks (CNN)
+- Vision Transformers (ViT)
+- Tabular Deep Learning
+- Feature Map Visualization
+- Micrograd (autograd engine from scratch)
+- Transformers built from scratch
 
-✅ GPU-ready notebooks for faster training
+The goal is not just model usage, but understanding **how deep learning systems work internally**.
 
-🎨 Repository Structure
-asfandyar-prog/
-│
-├── Artificial_neural_network.ipynb
-├── MLP.ipynb
-├── Titanic_Tabular_Classification_with_PyTorch_MLP.ipynb
-├── Tabular_Classification.ipynb
-├── MNIST_CNN_Classification.ipynb
-├── cifar-10-image-classification-with-a-deep-cnn.ipynb
-├── 🏗️_CIFAR_10_CNN.ipynb
-├── Assignment_1_MLP,_CNN_and_Vision_Transformers_in_PyTorch_(Due_Jan_26,_2025).ipynb
-└── README.md
+---
 
-🛠️ Installation & Requirements
+## 🏗 Repository Structure
 
-To run the notebooks:
+### 🔹 Foundations
+- `Artificial_neural_network.ipynb`
+- `MLP.ipynb`
+- `micrograd.ipynb` (autograd engine from scratch)
 
-git clone https://github.com/yourusername/asfandyar-prog.git
-cd asfandyar-prog
-pip install torch torchvision matplotlib seaborn scikit-learn jupyter
+### 🔹 Tabular Deep Learning
+- `Tabular_Classification.ipynb`
+- `Titanic_Tabular_Classification_with_PyTorch_MLP.ipynb`
 
+### 🔹 CNN Projects
+- `MNIST_CNN_Classification.ipynb`
+- `🏗️_CIFAR_10_CNN.ipynb`
+- `cifar-10-image-classification-with-a-deep-cnn.ipynb`
+- `feature-maps-project.ipynb`
 
-💡 Recommended: Use a GPU runtime for training CNNs and Vision Transformers.
+### 🔹 Transformers & Advanced Models
+- `transformer-from-scratch_1.ipynb`
+- `transformer-from-scratch-practice.ipynb`
+- `cifar-10-vision-transformer.ipynb`
+- `Assignment_1_MLP,_CNN_and_Vision_Transformers_in_PyTorch_(Due_Jan_26,_2025).ipynb`
 
-📈 Usage
+---
 
-Open the repository in Jupyter Notebook / Colab
+## 🧠 Core Concepts Covered
 
-Start with MLP notebooks → understand neural network basics
+### 1️⃣ Neural Networks
+- Forward & backward propagation
+- Activation functions
+- Loss functions
+- Optimization strategies
+- Overfitting & regularization
 
-Move to CNN notebooks → image classification projects
+### 2️⃣ Convolutional Neural Networks
+- Convolution operations
+- Feature extraction
+- Pooling layers
+- Batch normalization
+- Deep CNN architectures
+- Feature map visualization
 
-Explore Vision Transformers → advanced deep learning
+### 3️⃣ Vision Transformers
+- Patch embeddings
+- Multi-head self-attention
+- Positional encoding
+- Transformer encoder blocks
+- ViT architecture applied to CIFAR-10
 
-🧩 Evaluation & Metrics
+### 4️⃣ Transformers from Scratch
+- Attention mechanism derivation
+- Query, Key, Value matrices
+- Scaled dot-product attention
+- Multi-head attention
+- Encoder stacking
 
-Train / Validation Loss & Accuracy
+### 5️⃣ Micrograd Implementation
+- Scalar-based autograd system
+- Backpropagation engine
+- Graph-based gradient tracking
+- Educational deep learning core
 
-Confusion Matrix → analyze class-wise performance
+---
 
-Top-5 Accuracy → essential for CIFAR-100
+## 🛠 Tech Stack
 
-Visualization of predictions → success & failure cases
+- Python
+- PyTorch
+- NumPy
+- Matplotlib
+- Jupyter Notebook
 
-💡 Learning Outcomes
+---
 
-By using this repository, you will:
+## 🎯 Learning Philosophy
 
-Gain hands-on understanding of MLPs, CNNs, and Transformers
+This repository focuses on:
 
-Learn PyTorch fundamentals and advanced model building
+- Understanding model internals
+- Rebuilding components manually
+- Visualizing representations
+- Moving beyond black-box usage
+- Developing strong intuition for deep architectures
 
-Master data preprocessing, training loops, optimizers, and metrics
+---
 
-Be able to build real-world AI projects from scratch
+## 📊 Example Projects
 
-🔗 References
+### 🟢 MNIST Classification
+- CNN model
+- Training/validation split
+- Accuracy tracking
+- Confusion matrix
 
-PyTorch Documentation
+### 🟢 CIFAR-10 CNN
+- Deep convolutional architecture
+- Data augmentation
+- Performance analysis
 
-CIFAR Dataset
+### 🟢 Vision Transformer on CIFAR-10
+- Patch-based embedding
+- Attention blocks
+- Transformer-based image classification
 
-MNIST Dataset
+### 🟢 Titanic Tabular Classification
+- MLP for structured data
+- Feature preprocessing
+- Model evaluation
 
-👨‍💻 Author
+---
 
-Asfand Yar – BSc Computer Science | Deep Learning & AI Enthusiast
+## 🚀 Future Additions
 
+- ResNet implementation from scratch
+- U-Net for segmentation
+- GAN implementation
+- Diffusion model experiments
+- Quantization & model compression
+- Distributed training experiments
 
+---
 
+## 👨‍💻 About Me
 
-⭐ Contributions
+Asfand Yar  
+BSc Computer Science
+Interests:
+- Deep Learning
+- AI Systems Engineering
+- Transformer Architectures
+- AI × Quantum Computing
+- Research-Oriented ML Development
 
-Feel free to open issues, suggest improvements, or contribute!
+---
 
-Pull requests are welcome.
+## 📜 License
+
+This repository is for educational and research purposes.
+
+---
+
+If you find this repository helpful, feel free to star ⭐ it.
