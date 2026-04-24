@@ -76,3 +76,35 @@ score = model.evaluate(x_test, y_test, verbose=0)
 
 print("Test loss:", score[0])
 print("Test accuracy:", score[1])
+
+
+How would we spend the 24 hours we have? Let’s see:  
+
+AI Implementation 
+ 
+Extract Agent : Install instructor and define the Pydantic model Fields: company_name: str, price: float | None, sentiment: Literal["positive", "neutral", "negative"], market_share: float | None, key_feature: str | None, confidence: float. Connect the OpenAI client with instructor.patch(), then loop over text chunks and call LLM API with our schema. After Extraction, filter anything with confidence < 0.7 goes into a separate flagged list, not the main table. Output is a clean list of dicts that can be consumed direclty. 
+ 
+One thing worth spending time on here: the chunk size. Too large and the model hallucinate fields from wrong company. Around 500-800 chunk works well. 
+ 
+Ananlysis Agent ~1.5 Hours  
+ 
+Pure Python, no LLM. Take the entity list and build a scorecard per company. Rank by each numeric field – price ascending, market share descending, sentiment converted to a score then averaged. Flag outliers using a threshold: if a value is more than 1.5xthe standard deviation from the meam , mark it, These flagged anomalies become talking points in the final report. Keeping it as a dict: company -> {ranks, anomalies, sentiment_score}. 
+
+Synthesis Agent ~1.5 hours 
+
+One LLM call. Serialzing the full scoreboard dict to JSON and injecting it into the prompt. The prompt matters more than anything else here for example  
+ 
+"You are a PwC senior analyst. Based on the following competitive data, write: (1) a 3-sentence executive summary, (2) exactly 3 strategic observations each citing a specific number from the data, (3) a watchlist of 2–3 things to monitor. No filler, no generic statements." 
+ 
+The “cite a specific number “ instruction is key – it forces grounded output instead of vague summaries. 
+
+Glue + Testing ~1 hour  
+
+That's the entire interface teammates need. Testing end to end on one real Hungarian company — grabbing  a Trustpilot page manually, pasting it in, and verifying the output makes sense before connecting it to the live crawler.
+
+
+
+
+
+
+
